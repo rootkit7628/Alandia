@@ -1,19 +1,12 @@
 //Imports des components react de sa librairies [export par défaut] 
-import 'react-native-gesture-handler';
-import React from 'react';
+import React from 'react'
 import { Avatar, Accessory, Divider} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { NavigationContainer } from '@react-navigation/native';
-
-
 import logo from '../assets/image/logo.png';
+import background from '../assets/image/leaf.jpg'
 //Importer les components React-native de sa librairie [export nommés]
 import {StyleSheet,ImageBackground, Text, TouchableOpacity, Image, View } from 'react-native'
-// import { Image } from 'react-native';
 
-// import bgImg from '../assets/green.jpg'
-
-const background = { uri: "https://i.pinimg.com/originals/b6/46/15/b64615c7838f17461b43955494206baf.jpg" }
 // const bgImgUri = Image.resolveAssetSource(bgImg).uri
 
 class Dashboard extends React.Component {
@@ -35,28 +28,26 @@ class Dashboard extends React.Component {
         {/* ----------------------------------------------------------- */}
                 <TouchableOpacity style={styles.button} onPress={() => {}}>
                   <Icon name="map-marker" size={15} />
-                  <Text style={styles.text}>   Sarintany</Text>
+                  <Text style={styles.text}>   Carte</Text>
                 </TouchableOpacity>
 
                 <Divider style={styles.divider} />
 
-                <TouchableOpacity style={styles.button} onPress={() => {}}>
+                <TouchableOpacity style={styles.button} onPress={()=>this.props.navigation.navigate('Flatlist')}>
                   <Icon name="list" size={15} />
-                  <Text style={styles.text}>  Lisitra</Text>
+                  <Text style={styles.text}>  Liste</Text>
                 </TouchableOpacity>
 
                 <Divider style={styles.divider} />
 
-                <TouchableOpacity style={styles.button} onPress={() => {}}>
+                <TouchableOpacity style={styles.button} onPress={() => {}}> 
                   <Icon name="comments" size={15} />  
-                  <Text style={styles.text}>  Resaka</Text>
+                  <Text style={styles.text}>  Forum</Text>
                 </TouchableOpacity>
-
-                <Divider style={styles.divider} />
-
+        {/* ----------------------------------------------------------- */}
                 <TouchableOpacity style={styles.button} onPress={() => {}}>
                   <Icon name="users" size={15} />
-                  <Text style={styles.text}>  Izahay</Text>
+                  <Text style={styles.text}>  A propos</Text>
                 </TouchableOpacity>
                 <Divider style={styles.divider} />
         {/* ----------------------------------------------------------- */}
@@ -65,7 +56,6 @@ class Dashboard extends React.Component {
                   <Icon name="copyright" size={10} />
                 </View>
         {/* ----------------------------------------------------------- */}
-
             </ImageBackground>
           </View>
         )
