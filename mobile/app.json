@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Alandia",
+    "slug": "alandia",
+    "version": "2.0.0",
+    "scheme": "alandia",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "mg.alandia.app"
+    },
+    "android": {
+      "package": "mg.alandia.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#007549",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#F4F7F2",
+          "dark": { "backgroundColor": "#0F1A14" }
+        }
+      ],
+      "expo-status-bar",
+      "expo-secure-store",
+      "expo-image"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
