@@ -1,13 +1,18 @@
-node_modules/**/*
-.expo/*
-npm-debug.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-*.orig.*
-web-build/
+# Secrets
+.env
+.env.*
+!.env.example
 
-# macOS
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+backend/instance/
+*.sqlite3
+
+# Editors and OS
+.vscode/
+.idea/
 .DS_Store
